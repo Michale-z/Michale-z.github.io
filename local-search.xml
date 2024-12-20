@@ -8,7 +8,7 @@
     <link href="/2024/12/20/reinstallation/"/>
     <url>/2024/12/20/reinstallation/</url>
     
-    <content type="html"><![CDATA[<h2 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h2><h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><h2 id="cuDNN"><a href="#cuDNN" class="headerlink" title="cuDNN"></a>cuDNN</h2><h2 id="Conda-环境"><a href="#Conda-环境" class="headerlink" title="Conda 环境"></a>Conda 环境</h2><h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h2><h2 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h2><h4 id="nvtop"><a href="#nvtop" class="headerlink" title="nvtop"></a>nvtop</h4><h4 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h4><h4 id="…"><a href="#…" class="headerlink" title="…"></a>…</h4>]]></content>
+    <content type="html"><![CDATA[<div class="note note-success">            <p>显卡驱动</p>          </div><h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><h2 id="cuDNN"><a href="#cuDNN" class="headerlink" title="cuDNN"></a>cuDNN</h2><h2 id="Conda-环境"><a href="#Conda-环境" class="headerlink" title="Conda 环境"></a>Conda 环境</h2><h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h2><h2 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h2><h4 id="nvtop"><a href="#nvtop" class="headerlink" title="nvtop"></a>nvtop</h4><h4 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h4><h4 id="…"><a href="#…" class="headerlink" title="…"></a>…</h4>]]></content>
     
     
     <categories>
