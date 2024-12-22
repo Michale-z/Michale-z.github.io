@@ -19,15 +19,15 @@
   <meta name="author" content="zzc">
   <meta name="keywords" content="">
   
-    <meta name="description" content="显卡驱动12345ubuntu-drivers devices # 查看显卡驱动sudo apt install nvidia-driver-xxx # 安装驱动  eg: sudo apt install nvidia-driver-525reboot sudo apt update &amp;&amp; sudo apt upgrade # 更新软件nvidia-smi  # 查看显卡状态">
+    <meta name="description" content="显卡驱动12345ubuntu-drivers devices # 查看显卡驱动sudo apt install nvidia-driver-xxx # 安装驱动  eg: sudo apt install nvidia-driver-525reboot sudo apt update &amp;&amp; sudo apt upgrade # 更新软件nvidia-smi  # 查看显卡状态 C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu 重装系统">
 <meta property="og:url" content="https://michale-z.github.io/2024/12/20/reinstallation/index.html">
 <meta property="og:site_name" content="Zengzc">
-<meta property="og:description" content="显卡驱动12345ubuntu-drivers devices # 查看显卡驱动sudo apt install nvidia-driver-xxx # 安装驱动  eg: sudo apt install nvidia-driver-525reboot sudo apt update &amp;&amp; sudo apt upgrade # 更新软件nvidia-smi  # 查看显卡状态">
+<meta property="og:description" content="显卡驱动12345ubuntu-drivers devices # 查看显卡驱动sudo apt install nvidia-driver-xxx # 安装驱动  eg: sudo apt install nvidia-driver-525reboot sudo apt update &amp;&amp; sudo apt upgrade # 更新软件nvidia-smi  # 查看显卡状态 C">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-12-20T08:00:00.000Z">
-<meta property="article:modified_time" content="2024-12-22T07:01:28.172Z">
+<meta property="article:modified_time" content="2024-12-22T07:19:04.173Z">
 <meta property="article:author" content="zzc">
 <meta property="article:tag" content="ubuntu">
 <meta property="article:tag" content="linux">
@@ -228,7 +228,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          45 字
+          205 字
         
       </span>
     
@@ -239,7 +239,7 @@
         
         
         
-          1 分钟
+          2 分钟
         
       </span>
     
@@ -282,8 +282,18 @@
               <div class="markdown-body">
                 
                 <h2 id="显卡驱动"><a href="#显卡驱动" class="headerlink" title="显卡驱动"></a>显卡驱动</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">ubuntu-drivers devices <span class="hljs-comment"># 查看显卡驱动</span><br><span class="hljs-built_in">sudo</span> apt install nvidia-driver-xxx <span class="hljs-comment"># 安装驱动  eg: sudo apt install nvidia-driver-525</span><br>reboot <br><span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt upgrade <span class="hljs-comment"># 更新软件</span><br>nvidia-smi  <span class="hljs-comment"># 查看显卡状态</span><br></code></pre></td></tr></table></figure>
-
-<h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><h2 id="cuDNN"><a href="#cuDNN" class="headerlink" title="cuDNN"></a>cuDNN</h2><h2 id="Conda-环境"><a href="#Conda-环境" class="headerlink" title="Conda 环境"></a>Conda 环境</h2><h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h2><h2 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h2><h4 id="nvtop"><a href="#nvtop" class="headerlink" title="nvtop"></a>nvtop</h4><h4 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h4><h4 id="…"><a href="#…" class="headerlink" title="…"></a>…</h4>
+<h2 id="CUDA"><a href="#CUDA" class="headerlink" title="CUDA"></a>CUDA</h2><ul>
+<li>查看GPU支持的最高CUDA版本<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvidia-smi</span><br></code></pre></td></tr></table></figure></li>
+<li>查看gcc版本<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs applescript">gcc <span class="hljs-comment">--version </span><br>sudo apt-<span class="hljs-keyword">get</span> install gcc<span class="hljs-number">-9</span> <span class="hljs-comment"># 如果没有的话，g++ 同理。</span><br></code></pre></td></tr></table></figure></li>
+<li>前往 Nvidia 的CUDA官网：<a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">CUDA Toolkit Archive</a>，下载对应版本的CUDA Toolkit。<br><a href="/img/Linux/cuda-toolkit.png"></a><br><a href="/img/Linux/cuda-toolkit-des.png"></a></li>
+<li>进入到cuda-toolkit的解压目录，执行：<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs apache"><span class="hljs-attribute">sudo</span> sh cuda_11.<span class="hljs-number">2</span>.<span class="hljs-number">0</span>_460.<span class="hljs-number">89</span>_linux.run<br></code></pre></td></tr></table></figure></li>
+<li>在选择CUDA Installer时，除了Driver外，勾选所有其他的组件。</li>
+<li>接下来配置环境变量，输入一下命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">sudo</span> vim ~/.bashrc  <span class="hljs-comment"># 首先得有vim编辑器，没有的话， sudo apt install vim</span><br></code></pre></td></tr></table></figure>
+在文末添加：<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros"><span class="hljs-built_in">export</span> <span class="hljs-attribute">PATH</span>=/usr/local/cuda-11.2/bin$&#123;PATH:+:<span class="hljs-variable">$&#123;PATH&#125;</span>&#125;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">LD_LIBRARY_PATH</span>=/usr/local/cuda-11.2/lib64$&#123;LD_LIBRARY_PATH:+:<span class="hljs-variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;<br><span class="hljs-built_in">export</span> <span class="hljs-attribute">CUDA_HOME</span>=/usr/local/cuda-11.2<br></code></pre></td></tr></table></figure></li>
+<li>更新系统环境：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-built_in">source</span> ~/.bashrc<br></code></pre></td></tr></table></figure></li>
+<li>验证CUDA是否安装成功：<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">nvcc -v</span><br></code></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="cuDNN"><a href="#cuDNN" class="headerlink" title="cuDNN"></a>cuDNN</h2><h2 id="Conda-环境"><a href="#Conda-环境" class="headerlink" title="Conda 环境"></a>Conda 环境</h2><h2 id="Pytorch"><a href="#Pytorch" class="headerlink" title="Pytorch"></a>Pytorch</h2><h2 id="其他工具"><a href="#其他工具" class="headerlink" title="其他工具"></a>其他工具</h2><h4 id="nvtop"><a href="#nvtop" class="headerlink" title="nvtop"></a>nvtop</h4><h4 id="vim"><a href="#vim" class="headerlink" title="vim"></a>vim</h4><h4 id="…"><a href="#…" class="headerlink" title="…"></a>…</h4>
                 
               </div>
             
